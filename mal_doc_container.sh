@@ -20,7 +20,7 @@ tar_file="$(mktemp)"
 tar -cf "$tar_file" "$@"
 
 # Run container with below options and keep it running
-docker run -d --network none --hostname maldoc --name $container_name $image_name tail -f /dev/null
+docker run -d --hostname maldoc --name $container_name $image_name tail -f /dev/null
 
 # Copy the tar file to the Docker container
 docker cp "$tar_file" "$container_name:/home/maldoc/files.tar"
