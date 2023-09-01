@@ -4,7 +4,11 @@
  Current tools installed:
 
  -Didier Stevens' PDFid, PDF-Parser, oledump.
+ 
+
  -OLEtools (olevba, rtfobj, pcodedmp, oleid, xlmdeobfuscator)
+ 
+
  -Detect it Easy (diec)
 
  Additional tools will be added to the script or you can modify the Dockerfile to add any additional tools as per needed.
