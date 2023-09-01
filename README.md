@@ -1,6 +1,14 @@
 # MalDocAnalysisContainer
  Shell script and Dockerfile that will instantiate a docker container for malicous document analysis. Once analysis completed, exiting will destroy the container. This allows one to analyze malicious documents in newly instantiated containers.
 
+ Current tools installed:
+
+ -Didier Stevens' PDFid, PDF-Parser, oledump.
+ -OLEtools (olevba, rtfobj, pcodedmp, oleid, xlmdeobfuscator)
+ -Detect it Easy (diec)
+
+ Additional tools will be added to the script or you can modify the Dockerfile to add any additional tools as per needed.
+
 
  To instantiate the container, execute the shell script and provide a file for analysis as the argument:
 
