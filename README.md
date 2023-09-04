@@ -17,7 +17,7 @@
  To instantiate the container, execute the shell script and provide a file for analysis as the argument:
 
 
- ./mal_doc_container.sh <malicious file>
+ ./mal_doc_container.sh maldoc_file
 
 
 Prerequisites:
