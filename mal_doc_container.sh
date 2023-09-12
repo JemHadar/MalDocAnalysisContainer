@@ -8,7 +8,7 @@ then
 fi
 
 # Name the image and container
-image_name="malicious-documents"
+image_name="malicious-files"
 container_name="${image_name}_$(date +%s)"
 
 # Build docker image if it doesn't exist
@@ -34,6 +34,8 @@ docker exec -it $container_name /bin/bash
 # When exiting the container, the script will kill and remove it
 docker kill $container_name
 docker rm $container_name
+echo "The container was shutdown and removed"
 
 # Remove created tar temp file
 rm "$tar_file"
+
