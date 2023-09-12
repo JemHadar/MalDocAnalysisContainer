@@ -1,15 +1,18 @@
 # MalDocAnalysisContainer
-With the ARM architecture, various analysis VMs based on the x86 architecture x64 architecture that I used for analysis of malicious documents would no longer work. Having been exposed to docker and the benefits of using containers versus full fledged VMs, I thought it would be best to create a container with the most common tools that I use for maldoc analysis. The script will instantiate a docker image, install the necessary tools automatically and then run the container with the maldoc can be analyzed. When analysis is complete, exiting will automatically destroy and remove the container so that for your next analysis a new container can be instantiated. Initial creation of the docker image may take about 5 minutes since one of the packages will be built from source in the image. To date, the current tools included in the image are the ones below as well as standard linux tools:
+With the ARM architecture, various analysis VMs based on the x86 architecture x64 architecture that I used for analysis of malicious documents would no longer work. Having been exposed to docker and the benefits of using containers versus full fledged VMs, I thought it would be best to create a container with the most common tools that I use for maldoc analysis. The script will instantiate a docker image, install the necessary tools automatically and then run the container with the maldoc can be analyzed. When analysis is complete, exiting will automatically destroy and remove the container so that for your next analysis a new container can be instantiated. Initial creation of the docker image may take about 5 minutes since one of the packages will be built from source in the image. 
 
+Live Demo of the Docker Container:
+
+https://github.com/JemHadar/MalDocAnalysisContainer/assets/58823454/c524ac16-9350-43a5-88ab-0cd0e56ab263
+
+To date, the tools included in the image are the ones below as well as standard linux tools:
 
  Current tools installed:
 
  -Didier Stevens' PDFid, PDF-Parser, oledump.
  
-
  -OLEtools (olevba, rtfobj, pcodedmp, oleid, xlmdeobfuscator)
  
-
  -Detect it Easy (diec)
 
  Additional tools will be added to the script or you can modify the Dockerfile to add any additional tools as per needed.
@@ -18,7 +21,7 @@ With the ARM architecture, various analysis VMs based on the x86 architecture x6
  To instantiate the container, execute the shell script and provide a file for analysis as the argument:
 
 
- ./mal_doc_container.sh maldoc_file
+ ./mal_doc_container.sh maldoc_file_to_analyze
 
 
 Prerequisites:
