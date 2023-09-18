@@ -27,7 +27,7 @@ https://github.com/JemHadar/MalDocAnalysisContainer/assets/58823454/b1cefd0b-1d0
  ./mal_doc_container.sh maldoc_file
 
 
-Prerequisites:
+**Prerequisites:**
 
 Install Docker Engine
 
