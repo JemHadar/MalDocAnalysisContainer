@@ -11,8 +11,8 @@ RUN apt update && apt -y install python3-pip \
       qtbase5-dev  \
       qtscript5-dev \
       qttools5-dev-tools \
-      build-essential qtchooser \
-   && git clone --recursive https://github.com/horsicq/DIE-engine
+      build-essential qtchooser
+RUN   git clone --recursive https://github.com/horsicq/DIE-engine
 WORKDIR DIE-engine
 RUN bash -x build_dpkg.sh \
    && dpkg -i release/die_*.deb
@@ -33,10 +33,7 @@ RUN wget https://didierstevens.com/files/software/pdf-parser_V0_7_8.zip \
 RUN mkdir -p /home/maldoc
 WORKDIR /home/maldoc/
 RUN ln -s /usr/bin/python3 /usr/bin/python \
-    && echo "export PATH=\"/usr/local/bin:$PATH\"" >> /etc/profile \
-    && export PATH=$PATH:/usr/local/bin/pdfid.py \
-    && export PATH=$PATH:/usr/local/bin/pdf-parser.py \
-    && export PATH=$PATH:/usr/local/bin/oledump.py \
     && ln -s /usr/local/bin/pdfid.py /usr/local/bin/pdfid \
     && ln -s /usr/local/bin/oledump.py /usr/local/bin/oledump \
-    && ln -s /usr/local/bin/pdf-parser.py /usr/local/bin/pdf-parser
+    && ln -s /usr/local/bin/pdf-parser.py /usr/local/bin/pdf-parser \
+    && ln -s /usr/local/bin/xlmdeobfuscator /usr/local/bin/xlmdeob
