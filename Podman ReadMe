@@ -1,0 +1,24 @@
+Download Podman CLI
+https://podman.io
+
+
+Initialize podman via the commnand below and follow the instructions after initialization.
+After installing, the below command will create and start your first Podman machine.
+
+podman machine init
+
+
+After starting your first Podman machine via "podman machine start," following the commands below to clone the MalDoc repo:
+
+
+1. Clone the Repository
+
+git clone https://github.com/JemHadar/MalDocAnalysisContainer.git
+cd MalDocAnalysisContainer
+
+This directory includes the Dockerfile and related build context.
+
+
+Add the executable flag to the shell script; execute it and pass the file to be analyzed as an argument
+
+./podman_mal_doc.sh maldoc
