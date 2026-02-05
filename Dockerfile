@@ -37,3 +37,7 @@ RUN ln -s /usr/bin/python3 /usr/bin/python \
     && ln -s /usr/local/bin/oledump.py /usr/local/bin/oledump \
     && ln -s /usr/local/bin/pdf-parser.py /usr/local/bin/pdf-parser \
     && ln -s /usr/local/bin/xlmdeobfuscator /usr/local/bin/xlmdeob
+
+RUN pip3 install --no-cache-dir flare-floss
+
+RUN apt-get update && apt-get install -y yara    
